@@ -4,6 +4,7 @@ let productQuantity = document.getElementById("productQuantity");
 let addBtn = document.getElementById("addBtn");
 let tableBody = document.getElementById("tableBody");
 let message = document.getElementById("message");
+let totalNum = document.getElementById("totalNum");
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 displayProducts();
@@ -15,25 +16,27 @@ addBtn.addEventListener("click", function() {
         message.textContent = "Add product firstly";
         return;
     }
-        products.push({
+    products.push({
         name: name,
         price: price,
         quantity: quan
-});
+    });
     localStorage.setItem("products", JSON.stringify(products));
     displayProducts();
+    message.textContent = "";
     
     productName.value = "";
     productPrice.value = "";
     productQuantity.value = "";
 });
 function displayProducts() {
-        tableBody.innerHTML = "";
-        products.forEach(function(product, index){
-            let tr = document.createElement("tr");
-            tableBody.appendChild(tr);
-            let tdName = document.createElement("td");
-            tr.appendChild(tdName);
+    tableBody.innerHTML = "";
+    let total = 0;
+    products.forEach(function(product, index){
+        let tr = document.createElement("tr");
+        tableBody.appendChild(tr);
+        let tdName = document.createElement("td");
+        tr.appendChild(tdName);
             tdName.textContent = product.name;
             let tdPrice = document.createElement("td");
             tr.appendChild(tdPrice);
@@ -52,11 +55,16 @@ function displayProducts() {
             deleteBtn.type = "button";
             deleteBtn.className = "deleteBtn";
             deleteBtn.textContent = "Delete";
+            total += Number(product.price) * Number(product.quantity);
+            totalNum.textContent = total;
             tdActionBtns.appendChild(deleteBtn);
             deleteBtn.addEventListener("click", function() {
                 products.splice(index, 1);
                 localStorage.setItem("products", JSON.stringify(products));
                 displayProducts();
+                total -= Number(product.price) * Number(product.quantity);
+                totalNum.textContent = total;
+                message.textContent = "";
             });
             editBtn.addEventListener("click", function() {
                 productName.value = product.name;
@@ -65,6 +73,7 @@ function displayProducts() {
                 products.splice(index, 1);
                 localStorage.setItem("products", JSON.stringify(products));
                 displayProducts();
+                message.textContent = "";
             });
             
 });
