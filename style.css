@@ -71,18 +71,20 @@ th {
     font-weight: bold;
     padding-right: 150px;
     padding-bottom: 10px;
-}
-button {
-    background-color: white;
-    border: 1px solid #E3E7EF;
-    border-radius: 8px;
-    padding: 10px;
-}
+} 
 .deleteBtn {
+    background-color: white;
     color: red;
+    border: 1px solid #E3E7EF;
+    padding: 10px;
+    border-radius: 8px;
 }
 .editBtn{
+    background-color: white;
     color: #2D6CDF;
+    border: 1px solid #E3E7EF;
+    padding: 10px;
+    border-radius: 8px;
 }
 button:hover{
     cursor: pointer;
