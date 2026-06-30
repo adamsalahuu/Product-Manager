@@ -71,19 +71,18 @@ th {
     font-weight: bold;
     padding-right: 150px;
     padding-bottom: 10px;
-} 
-.deleteBtn {
+}
+button {
     background-color: white;
-    color: red;
     border: 1px solid #E3E7EF;
-    padding: 10px;
     border-radius: 8px;
+    padding: 10px;
+}
+.deleteBtn {
+    color: red;
 }
 .editBtn{
-    background-color: white;
     color: #2D6CDF;
-    border: 1px solid #E3E7EF;
-    padding: 10px;
 }
 button:hover{
     cursor: pointer;
