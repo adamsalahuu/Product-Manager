@@ -64,19 +64,14 @@ input:focus {
     border-radius: 10px;
     border: 1px solid #E3E7EF;
     background-color: white;
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-bottom: 30px;
+    margin-left: 160px;
 }
-.head{
+th {
     background-color: #f6f8fc;
     font-weight: bold;
-    padding-right: 230px;
+    padding-right: 150px;
     padding-bottom: 10px;
 } 
-tBody {
-    background-color: white;
-}
 .deleteBtn {
     background-color: white;
     color: red;
