@@ -5,6 +5,7 @@ let addBtn = document.getElementById("addBtn");
 let tableBody = document.getElementById("tableBody");
 let message = document.getElementById("message");
 let totalNum = document.getElementById("totalNum");
+let tdProduct = document.getElementById("tdProduct");
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
 displayProducts();
@@ -32,6 +33,7 @@ addBtn.addEventListener("click", function() {
 function displayProducts() {
     tableBody.innerHTML = "";
     let total = 0;
+    let totalProduct = 0;
     products.forEach(function(product, index){
         let tr = document.createElement("tr");
         tableBody.appendChild(tr);
@@ -46,6 +48,9 @@ function displayProducts() {
             tdQuan.textContent = product.quantity;
             let tdActionBtns = document.createElement("td");
             tr.appendChild(tdActionBtns);
+            let tdTotal = document.createElement("td");
+            tr.appendChild(tdTotal);
+            tdTotal.textContent = Number(product.price) * Number(product.quantity);
             let editBtn = document.createElement("button");
             editBtn.type = "button";
             editBtn.className = "editBtn";
@@ -55,10 +60,12 @@ function displayProducts() {
             deleteBtn.type = "button";
             deleteBtn.className = "deleteBtn";
             deleteBtn.textContent = "Delete";
+            tdProduct.textContent = products.length;;
             total += Number(product.price) * Number(product.quantity);
             totalNum.textContent = total;
             tdActionBtns.appendChild(deleteBtn);
             deleteBtn.addEventListener("click", function() {
+                tdProduct.textContent = products.length - 1;
                 products.splice(index, 1);
                 localStorage.setItem("products", JSON.stringify(products));
                 displayProducts();
