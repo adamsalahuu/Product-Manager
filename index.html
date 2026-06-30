@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Product Manager</h1>
+    <div class="all">
+        <div class="divForm">
+            <h3>Add a product</h3>
+            <form class="form">
+                <p id="message"></p>
+                <div class="field">
+                    <label for="productName" id="nameLabel">Name</label>
+                    <input type="text" id="productName" placeholder="Add a product">
+                </div>
+                <div class="field">
+                    <label for="productPrice" id="priceLabel">Price</label>
+                    <input type="number" id="productPrice" placeholder="Price">
+                </div>
+                <div class="field">
+                    <label for="productQuantity" id="quantityLabel">Quantity</label>
+                    <input type="number" id="productQuantity" placeholder="Quantity">
+                </div>
+                <button type="button" id="addBtn">+ Add product</button>
+            </form>
+        </div>
+        <div class="card">
+                <h2>Products</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Actions</th>
+                            <th>Total price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                    <tfoot>
+                        <tr class="tfoot">
+                            <td colspan="3" class="total">Total</td>
+                            <td id="totalNum" class="totalNum" colspan="2">0</td>
+                        </tr>
+                        <tr class="tfoot">
+                            <td colspan="3" class="total">Total products</td>
+                            <td colspan="2" id="tdProduct" class="totalNum">0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

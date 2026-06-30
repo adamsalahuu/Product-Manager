@@ -1,0 +1,105 @@
+body {
+    background-color: #f6f8fc;
+}
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+h2 {
+    margin-left: 160px;
+}
+h3 {
+    margin-left: 160px;
+}
+.form {
+    display: flex;
+    padding: 15px;
+    align-items: end;
+    gap: 15px;
+    border-radius: 20px;
+    border: 1px solid #E3E7EF;
+    background-color: white;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+}
+label {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    width: 220px;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+}
+input:focus {
+    border: 1px solid #2D6CDF;
+}
+#addBtn {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: #2D6CDF;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 200px;
+    border: none;
+}
+#addBtn:hover {
+    cursor: pointer;
+}
+#addBtn:focus {
+    border: 1px solid black;
+}
+.table {
+    border-radius: 10px;
+    border: 1px solid #E3E7EF;
+    background-color: white;
+    margin-left: 160px;
+}
+th {
+    background-color: #f6f8fc;
+    font-weight: bold;
+    padding-right: 150px;
+    padding-bottom: 10px;
+} 
+.deleteBtn {
+    background-color: white;
+    color: red;
+    border: 1px solid #E3E7EF;
+    padding: 10px;
+    border-radius: 8px;
+}
+.editBtn{
+    background-color: white;
+    color: #2D6CDF;
+    border: 1px solid #E3E7EF;
+    padding: 10px;
+}
+button:hover{
+    cursor: pointer;
+}
+.total {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.totalNum {
+    padding-top: 20px;
+    font-size: 20px;
+}
+.tfoot {
+    background-color: #f6f8fc;
+    border: 1px solid white;
+}
