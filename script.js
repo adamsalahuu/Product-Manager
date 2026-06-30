@@ -46,11 +46,11 @@ function displayProducts() {
             let tdQuan = document.createElement("td");
             tr.appendChild(tdQuan);
             tdQuan.textContent = product.quantity;
-            let tdActionBtns = document.createElement("td");
-            tr.appendChild(tdActionBtns);
             let tdTotal = document.createElement("td");
             tr.appendChild(tdTotal);
             tdTotal.textContent = Number(product.price) * Number(product.quantity);
+            let tdActionBtns = document.createElement("td");
+            tr.appendChild(tdActionBtns);
             let editBtn = document.createElement("button");
             editBtn.type = "button";
             editBtn.className = "editBtn";
