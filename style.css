@@ -61,24 +61,19 @@ input:focus {
     border: 1px solid black;
 }
 .table {
-    padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid #E3E7EF;
-    /* background-color: white; */
+    background-color: white;
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 30px;
 }
-.head {
-    font-weight: bold;
-    padding-right: 250px;
-    padding-bottom: 10px;
-    border: 1px solid #f6f8fc;
+.head{
     background-color: #f6f8fc;
-}
-.headRow {
-    border: 1px solid #f6f8fc;
-}
+    font-weight: bold;
+    padding-right: 230px;
+    padding-bottom: 10px;
+} 
 tBody {
     background-color: white;
 }
@@ -98,4 +93,18 @@ tBody {
 button:hover{
     cursor: pointer;
 }
-
+.total {
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.totalNum {
+    padding-top: 20px;
+    font-size: 20px;
+}
+.tfoot {
+    background-color: #f6f8fc;
+    border: 1px solid white;
+}
