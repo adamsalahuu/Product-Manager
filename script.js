@@ -1,0 +1,71 @@
+let productName = document.getElementById("productName");
+let productPrice = document.getElementById("productPrice");
+let productQuantity = document.getElementById("productQuantity");
+let addBtn = document.getElementById("addBtn");
+let tableBody = document.getElementById("tableBody");
+let message = document.getElementById("message");
+let products = JSON.parse(localStorage.getItem("products")) || [];
+
+displayProducts();
+addBtn.addEventListener("click", function() {
+    let name = productName.value;
+    let price = productPrice.value;
+    let quan = productQuantity.value;
+    if (name === "" || price === "" || quan === "") {
+        message.textContent = "Add product firstly";
+        return;
+    }
+        products.push({
+        name: name,
+        price: price,
+        quantity: quan
+});
+    localStorage.setItem("products", JSON.stringify(products));
+    displayProducts();
+    
+    productName.value = "";
+    productPrice.value = "";
+    productQuantity.value = "";
+});
+function displayProducts() {
+        tableBody.innerHTML = "";
+        products.forEach(function(product, index){
+            let tr = document.createElement("tr");
+            tableBody.appendChild(tr);
+            let tdName = document.createElement("td");
+            tr.appendChild(tdName);
+            tdName.textContent = product.name;
+            let tdPrice = document.createElement("td");
+            tr.appendChild(tdPrice);
+            tdPrice.textContent = product.price;
+            let tdQuan = document.createElement("td");
+            tr.appendChild(tdQuan);
+            tdQuan.textContent = product.quantity;
+            let tdActionBtns = document.createElement("td");
+            tr.appendChild(tdActionBtns);
+            let editBtn = document.createElement("button");
+            editBtn.type = "button";
+            editBtn.className = "editBtn";
+            editBtn.textContent = "Edit";
+            tdActionBtns.appendChild(editBtn);
+            let deleteBtn = document.createElement("button");
+            deleteBtn.type = "button";
+            deleteBtn.className = "deleteBtn";
+            deleteBtn.textContent = "Delete";
+            tdActionBtns.appendChild(deleteBtn);
+            deleteBtn.addEventListener("click", function() {
+                products.splice(index, 1);
+                localStorage.setItem("products", JSON.stringify(products));
+                displayProducts();
+            });
+            editBtn.addEventListener("click", function() {
+                productName.value = product.name;
+                productPrice.value = product.price;
+                productQuantity.value = product.quantity;
+                products.splice(index, 1);
+                localStorage.setItem("products", JSON.stringify(products));
+                displayProducts();
+            });
+            
+});
+    }
