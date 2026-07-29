@@ -21,7 +21,7 @@ h3 {
     align-items: end;
     gap: 15px;
     border-radius: 20px;
-    border: 1px solid #121212;
+    border: 1px solid #2A2A2A;
     background-color: #121212;
     margin-left: 150px;
     margin-right: 150px;
@@ -41,13 +41,13 @@ input{
     width: 220px;
     height: 42px;
     padding: 0 12px;
-    border: 1px solid #121212;
+    border: 1px solid #2A2A2A;
     border-radius: 8px;
     outline: none;
     background-color: #121212;
 }
 input:focus {
-    border: 1px solid #2D6CDF;
+    border: 1px solid #2A2A2A;
 }
 #addBtn {
     padding: 10px;
@@ -67,7 +67,7 @@ input:focus {
 }
 .table {
     border-radius: 10px;
-    border: 1px solid #E3E7EF;
+    border: 1px solid #2A2A2A;
     background-color: #121212;
     margin-left: 160px;
     color: white;
@@ -81,14 +81,14 @@ th {
 .deleteBtn {
     background-color: white;
     color: red;
-    border: 1px solid #E3E7EF;
+    border: 1px solid #2A2A2A;
     padding: 10px;
     border-radius: 8px;
 }
 .editBtn{
     background-color: white;
     color: #2D6CDF;
-    border: 1px solid #E3E7EF;
+    border: 1px solid #2A2A2A;
     padding: 10px;
     border-radius: 8px;
 }
@@ -107,6 +107,6 @@ button:hover{
     font-size: 20px;
 }
 .tfoot {
-    background-color: #f6f8fc;
-    border: 1px solid white;
+    background-color: #121212;
+    border: 1px solid #2A2A2A;
 }
