@@ -38,6 +38,7 @@ label {
     flex-direction: column;
 }
 input{
+    color: white;
     width: 220px;
     height: 42px;
     padding: 0 12px;
@@ -79,14 +80,14 @@ th {
     padding-bottom: 10px;
 } 
 .deleteBtn {
-    background-color: white;
+    background-color: #121212;
     color: red;
     border: 1px solid #2A2A2A;
     padding: 10px;
     border-radius: 8px;
 }
 .editBtn{
-    background-color: white;
+    background-color: #121212;
     color: #2D6CDF;
     border: 1px solid #2A2A2A;
     padding: 10px;
