@@ -48,7 +48,7 @@ input{
     background-color: #121212;
 }
 input:focus {
-    border: 1px solid #2A2A2A;
+    border: 1px solid #2D6CDF;
 }
 #addBtn {
     padding: 10px;
