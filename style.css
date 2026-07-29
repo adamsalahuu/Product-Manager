@@ -1,16 +1,19 @@
 body {
-    background-color: #f6f8fc;
+    background-color: #121212;
 }
 h1 {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 40px;
+    color: white;
 }
 h2 {
     margin-left: 160px;
+    color: white;
 }
 h3 {
     margin-left: 160px;
+    color: white;
 }
 .form {
     display: flex;
@@ -19,7 +22,7 @@ h3 {
     gap: 15px;
     border-radius: 20px;
     border: 1px solid #E3E7EF;
-    background-color: white;
+    background-color: #121212;
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 30px;
@@ -28,6 +31,7 @@ label {
     margin-bottom: 6px;
     font-size: 14px;
     font-weight: bold;
+    color: white;
 }
 .field{
     display: flex;
@@ -40,6 +44,7 @@ input{
     border: 1px solid #ddd;
     border-radius: 8px;
     outline: none;
+    background-color: #121212;
 }
 input:focus {
     border: 1px solid #2D6CDF;
@@ -63,7 +68,7 @@ input:focus {
 .table {
     border-radius: 10px;
     border: 1px solid #E3E7EF;
-    background-color: white;
+    background-color: #121212;
     margin-left: 160px;
 }
 th {
