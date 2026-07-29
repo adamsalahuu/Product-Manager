@@ -21,7 +21,7 @@ h3 {
     align-items: end;
     gap: 15px;
     border-radius: 20px;
-    border: 1px solid #E3E7EF;
+    border: 1px solid #121212;
     background-color: #121212;
     margin-left: 150px;
     margin-right: 150px;
@@ -41,7 +41,7 @@ input{
     width: 220px;
     height: 42px;
     padding: 0 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #121212;
     border-radius: 8px;
     outline: none;
     background-color: #121212;
@@ -70,9 +70,10 @@ input:focus {
     border: 1px solid #E3E7EF;
     background-color: #121212;
     margin-left: 160px;
+    color: white;
 }
 th {
-    background-color: #f6f8fc;
+    background-color: #121212;
     font-weight: bold;
     padding-right: 150px;
     padding-bottom: 10px;
